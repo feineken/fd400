@@ -1,5 +1,6 @@
 # Archivos TXT de nominas (contienen datos de pago reales)
 *.txt
+!requirements.txt
 
 # Excel con datos reales de proveedores o empleados
 proveedores_ejemplo.xlsx
