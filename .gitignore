@@ -1,0 +1,19 @@
+# Archivos TXT de nominas (contienen datos de pago reales)
+*.txt
+
+# Excel con datos reales de proveedores o empleados
+proveedores_*.xlsx
+
+# Script con datos de pago reales hardcodeados
+_crear_excel.py
+
+# PDF del banco (14.8 MB, no es codigo)
+fd400.pdf
+
+# Claude Code (configuracion local del IDE)
+.claude/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
