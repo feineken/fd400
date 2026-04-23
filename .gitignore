@@ -2,10 +2,11 @@
 *.txt
 
 # Excel con datos reales de proveedores o empleados
-proveedores_*.xlsx
+proveedores_ejemplo.xlsx
 
 # Script con datos de pago reales hardcodeados
 _crear_excel.py
+_crear_excel_rem.py
 
 # PDF del banco (14.8 MB, no es codigo)
 fd400.pdf
@@ -17,3 +18,8 @@ fd400.pdf
 __pycache__/
 *.pyc
 *.pyo
+
+#.txt
+.txt
+pago 23 abril  revisar.txt
+proveedores_202XXXXX.txt
