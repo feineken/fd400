@@ -68,7 +68,7 @@ n_medios = len(medios) + 1
 ws = wb.active
 ws.title = "Remuneraciones"
 
-headers = ["RUT", "DV", "Nombre", "Banco", "Cuenta", "MedioPago", "Monto", "Descripcion"]
+headers = ["RUT", "DV", "Nombre", "Banco", "Cuenta", "MedioPago", "Monto", "Descripcion", "Email", "GlosaMensaje"]
 ws.append(headers)
 
 for cell in ws[1]:
@@ -76,7 +76,7 @@ for cell in ws[1]:
     cell.font = header_font
     cell.alignment = Alignment(horizontal="center")
 
-anchos = [13, 4, 42, 8, 20, 12, 12, 30]
+anchos = [13, 4, 42, 8, 20, 12, 12, 30, 30, 35]
 for i, w in enumerate(anchos, 1):
     ws.column_dimensions[ws.cell(row=1, column=i).column_letter].width = w
 
@@ -108,4 +108,5 @@ ws.freeze_panes = "A2"
 
 wb.save("remuneraciones_template.xlsx")
 print("OK: remuneraciones_template.xlsx")
-print("   Hoja: Remuneraciones | Columnas A-H | Dropdowns en D y F")
+print("   Hoja: Remuneraciones | Columnas A-J | Dropdowns en D y F")
+print("   Columnas opcionales: I (Email), J (GlosaMensaje)")

@@ -10,9 +10,9 @@ from datetime import datetime
 RUT_EMPRESA   = "XXXXXXXX"   # sin DV, sin puntos ni guiones
 DV_EMPRESA    = "9"
 COD_CONVENIO  = "002"
-NUM_NOMINA    = "XXXXX"      # max 5 digitos
+NUM_NOMINA    = "60424"      # max 5 digitos
 NOMBRE_NOMINA = "Pago nomina"
-FECHA_PAGO    = "20260424"   # AAAAMMDD
+FECHA_PAGO    = "20260507"   # AAAAMMDD
 # --------------------------------------------------------
 
 
@@ -144,7 +144,7 @@ def tiene_facturas(row):
 def main():
     archivo = sys.argv[1] if len(sys.argv) > 1 else "proveedores.xlsx"
 
-    wb = openpyxl.load_workbook(archivo)
+    wb = openpyxl.load_workbook(archivo, data_only=True)
     ws = wb["Proveedores"]
 
     rows = []
