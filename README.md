@@ -26,12 +26,12 @@ pip install -r requirements.txt
 Al inicio de cada script hay un bloque que **debes editar antes de correr**:
 
 ```python
-RUT_EMPRESA   = "XXXXXXXX"   # sin DV, sin puntos ni guiones
-DV_EMPRESA    = "9"
-COD_CONVENIO  = "002"        # codigo de tu contrato con el banco
-NUM_NOMINA    = "XXXXX"      # numero unico que asignas a esta nomina (max 5 digitos)
-NOMBRE_NOMINA = "Pago nomina"  # nombre libre, max 25 caracteres
-FECHA_PAGO    = "20260424"   # AAAAMMDD
+RUT_EMPRESA   = ""   # sin DV, sin puntos ni guiones
+DV_EMPRESA    = ""
+COD_CONVENIO  = ""   # codigo de tu contrato con el banco
+NUM_NOMINA    = ""   # numero unico que asignas a esta nomina (max 5 digitos)
+NOMBRE_NOMINA = ""   # nombre libre, max 25 caracteres
+FECHA_PAGO    = ""   # AAAAMMDD
 ```
 
 ### 2. Preparar el Excel
