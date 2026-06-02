@@ -7,12 +7,12 @@ import openpyxl
 from datetime import datetime
 
 # --- VARIABLES EMPRESA (editar antes de cada corrida) ---
-RUT_EMPRESA   = "XXXXXXXX"   # sin DV, sin puntos ni guiones
-DV_EMPRESA    = "9"
-COD_CONVENIO  = "001"
-NUM_NOMINA    = "04526"
-NOMBRE_NOMINA = "Pago nomina"
-FECHA_PAGO    = "202XXXXX"   # AAAAMMDD
+RUT_EMPRESA   = ""   # sin DV, sin puntos ni guiones
+DV_EMPRESA    = ""
+COD_CONVENIO  = ""   # codigo convenio de tu contrato con el banco
+NUM_NOMINA    = ""   # max 5 digitos, unico por nomina
+NOMBRE_NOMINA = ""   # max 25 caracteres
+FECHA_PAGO    = ""   # AAAAMMDD
 # --------------------------------------------------------
 
 

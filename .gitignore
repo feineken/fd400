@@ -2,15 +2,22 @@
 *.txt
 !requirements.txt
 
-# Excel con datos reales de proveedores o empleados
-proveedores_ejemplo.xlsx
+# Excel con datos reales (nunca subir al repo)
+*.xlsx
+!*_template.xlsx
 
 # Script con datos de pago reales hardcodeados
 _crear_excel.py
 _crear_excel_rem.py
 
+# Configuracion local con datos de empresa guardados
+fd400_config.json
+
 # PDF del banco (14.8 MB, no es codigo)
 fd400.pdf
+
+# Streamlit secrets locales
+.streamlit/secrets.toml
 
 # Claude Code (configuracion local del IDE)
 .claude/
@@ -19,8 +26,3 @@ fd400.pdf
 __pycache__/
 *.pyc
 *.pyo
-
-#.txt
-.txt
-pago 23 abril  revisar.txt
-proveedores_202XXXXX.txt
