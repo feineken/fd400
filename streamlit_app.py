@@ -32,8 +32,11 @@ def check_password():
 # ── helpers ───────────────────────────────────────────────────────────────────
 
 def pad_num(v, n):
-    # Keep only digits (handles RUTs/accounts with hyphens or dots), then pad/truncate to n
-    s = ''.join(c for c in str(v).strip() if c.isdigit())
+    # Convert floats like 12345678.0 → int before stringifying, so the .0 doesn't become an extra digit
+    try:
+        s = str(int(float(str(v).strip())))
+    except Exception:
+        s = str(v).strip()
     return s.zfill(n)[-n:]
 
 def pad_char(v, n):
