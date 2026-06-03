@@ -32,7 +32,9 @@ def check_password():
 # ── helpers ───────────────────────────────────────────────────────────────────
 
 def pad_num(v, n):
-    return str(v).strip().zfill(n)
+    # Keep only digits (handles RUTs/accounts with hyphens or dots), then pad/truncate to n
+    s = ''.join(c for c in str(v).strip() if c.isdigit())
+    return s.zfill(n)[-n:]
 
 def pad_char(v, n):
     s = str(v).strip() if v is not None else ""
@@ -263,7 +265,7 @@ def empresa_form(prefix):
     """Renders company fields and returns a cfg dict. Returns None if incomplete."""
     col1, col2 = st.columns(2)
     with col1:
-        rut = st.text_input("RUT Empresa (sin DV, sin puntos)", key=f"{prefix}_rut")
+        rut = st.text_input("RUT Empresa (sin DV, sin puntos)", max_chars=9, key=f"{prefix}_rut")
         dv  = st.text_input("DV Empresa", max_chars=1, key=f"{prefix}_dv")
         convenio = st.text_input("Código Convenio (3 dígitos)", max_chars=3, key=f"{prefix}_conv")
     with col2:
